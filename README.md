@@ -10,7 +10,7 @@ There is only one dependency, The **QR2Pdf** package needs to use the QRCode cla
 Add to your Package.swift, the following:
 
 ```swift
-.package(url: "https://github.com/janigro/QR2Pdf.git", from: "1.0.0")
+.package(url: "https://github.com/janigro/QR2Pdf.git", from: "0.9.1")
 ```
 
 The package name is ```QR2Pdf```, added it to your target, for example:

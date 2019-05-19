@@ -34,6 +34,26 @@ class QR2PdfTests: XCTestCase {
         
     }
     
+    func test_buildPDF_big() {
+        guard let qr = QRCode("Hello World! (default)") else { return XCTFail("Unable to create QR code") }
+        
+        let props = QRProperties(onColor: .black, offColor: .white, dimension: .cm(left: 1, bottom: 1, size: 18))
+        let pdf = qr.pdf(pageSize: .cm(width: 20, height: 20), properties: props)
+        
+        let tmpUrl = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("QR2Pdf_Test.pdf")
+        
+        do {
+            try pdf.save(url: tmpUrl)
+            
+            print("File saved to: \(tmpUrl)")
+            
+            NSWorkspace.shared.open(tmpUrl)
+        } catch let err {
+            return XCTFail("Failed to save file! Error = \(err.localizedDescription)")
+        }
+        
+    }
+    
     func test_buildPDF_wText() {
         guard let qr = QRCode("Hello World! (with text)") else { return XCTFail("Unable to create QR code") }
         
