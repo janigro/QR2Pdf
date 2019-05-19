@@ -3,6 +3,9 @@ import PackageDescription
 
 let package = Package(
     name: "QR2Pdf",
+    platforms: [
+       .macOS(.v10_12), .iOS(.v8), .watchOS(.v2), .tvOS(.v9),
+    ],
     products: [
        .library(name: "QR2Pdf", targets: ["QR2Pdf"]),
     ],
