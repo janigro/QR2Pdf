@@ -1,5 +1,6 @@
-# Description
+[![MIT License](https://img.shields.io/github/license/ApolloZhu/swift_qrcodejs.svg)](./LICENSE) [![Swift Package Manager Compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager/) [![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
 
+# Description
 This package offers an extension to the **QRCode** class, and enables you to create a pdf that can be either saved to a file or to a Data object. This package is cross-platform. The only dependencies are shown below.
 
 # Dependencies
@@ -115,6 +116,7 @@ Each text array element has a string, a color, a position and a font size. Font 
 # Disclaimer
 
 I am not a PDF spec expert. Until yesterday I knew nothing about it. This means that if you need more fancy options to create your PDF, you should probably link to a serious pdf library. However, if you would like a **very** light weight option, go ahead an clone away.
+
 
 
 
